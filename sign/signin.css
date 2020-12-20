@@ -1,0 +1,309 @@
+@import url(../css/font-face.css);
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    /**
+      * Spot Palette
+      */
+    --mt-bridesmaid-lt: #ffe5db;
+    --mt-redorange-lt: #ff3b33;
+    --mt-mandyspink-lt: #ff7f51;
+    --mt-fountainblue-lt: #57babb;
+}
+body {
+    font-family: SanFrancisco;
+    background: white;
+    overflow: hidden;
+
+}
+input, button {
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.__back {
+    transition: transform 1s ease-in-out;
+    z-index: 100;;
+    color: #6c6c6c;
+    text-transform: capitalize;
+    font-size: 14px;
+    text-decoration: none !important;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+}
+.__back > p {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+.__back i {
+    font-size: 11px;
+    margin-right: 5px;
+}
+.moved-left {
+    transform: translateX(33em);
+    transition: transform 1s ease-in-out;
+}
+.tip {
+    font-size: 20px;
+    margin: 40px auto 50px;
+    text-align: center;
+}
+.cont {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto 100px;
+    background: #fff;
+}
+.form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 640px;
+    height: 100%;
+    transition: transform 1.2s ease-in-out;
+    padding: 50px 30px 0;
+}
+.sub-cont {
+    overflow: hidden;
+    position: absolute;
+    left: 64.2%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 260px;
+    background: #fff;
+    transition: transform 1.2s ease-in-out;
+}
+.cont.s--signup .sub-cont {
+    transform: translate3d(-64.3%, 0, 0);
+}
+button {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 36px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.img {
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500px;
+    height: 100%;
+    padding-top: 360px;
+}
+.img:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    /*background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/sections-3.jpg');*/
+    background-color: var(--mt-bridesmaid-lt);
+    background-size: cover;
+    transition: transform 1.2s ease-in-out;
+}
+.img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 0, 0, 0.6);*/
+}
+.img__text.m--up h2{
+    color: var(--mt-mandyspink-lt);
+}
+.img__text.m--up p{
+    color: var(--mt-mandyspink-lt);
+}
+.img__text.m--in h2{
+    color: var(--mt-mandyspink-lt);
+}
+.img__text.m--in p{
+    color: var(--mt-mandyspink-lt);
+}
+.img__btn
+.cont.s--signup .img:before {
+    transform: translate3d(640px, 0, 0);
+}
+.img__text {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    transition: transform 1.2s ease-in-out;
+}
+.img__text h2 {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.img__text p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.cont.s--signup .img__text.m--up {
+    transform: translateX(520px);
+}
+.img__text.m--in {
+    transform: translateX(-520px);
+}
+.cont.s--signup .img__text.m--in {
+    transform: translateX(0);
+}
+.img__btn {
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    width: 100px;
+    height: 36px;
+    margin: 0 auto;
+    background: transparent;
+    color: var(--mt-mandyspink-lt);
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+}
+.img__btn:after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--mt-mandyspink-lt);
+    border-radius: 30px;
+}
+.img__btn span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.2s;
+}
+.img__btn span.m--in {
+    transform: translateY(-72px);
+}
+.cont.s--signup .img__btn span.m--in {
+    transform: translateY(0);
+}
+.cont.s--signup .img__btn span.m--up {
+    transform: translateY(72px);
+}
+h2 {
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+}
+label {
+    position: relative;
+    display: block;
+    width: 260px;
+    margin: 25px auto 0;
+    text-align: center;
+}
+label span {
+    transition: all 0.5s;
+    font-size: 12px;
+    color: #cfcfcf;
+    text-transform: uppercase;
+}
+input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+input:focus label {
+    color: #000;
+}
+.forgot-pass {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #cfcfcf;
+}
+.submit {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: #ff3b30;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.fb-btn {
+    border: 2px solid #d3dae9;
+    color: #8fa1c7;
+}
+.fb-btn span {
+    font-weight: bold;
+    color: #455a81;
+}
+.sign-in {
+    width: 64.2%;
+    transition-timing-function: ease-out;
+}
+#view {
+    position: absolute;
+    color: #000000;
+    background: #FFFFFF;
+    top: 25%;
+    right: 0;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 100px;
+    opacity: 0.5;
+    transform: scale(0.75);
+    transition: all 0.5s;
+}
+#view:hover {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #f3f3f3;
+    transition: all 0.5s;
+}
+.active {
+    color: #1e71ee !important;
+}
+.cont.s--signup .sign-in {
+    transition-timing-function: ease-in-out;
+    transition-duration: 1.2s;
+    transform: translate3d(100vh, 0, 0);
+}
+.sign-up {
+    width: 80%;
+    transform: translate3d(-100%, 0, 0);
+}
+.cont.s--signup .sign-up {
+    transform: translate3d(26%, 0, 0);
+}
